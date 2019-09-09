@@ -66,15 +66,15 @@ const particlesOptions = {
 export default function Signin() {
   const classes = useStyles();
 
-  return (
+  return ( 
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       {/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
-      <Grid item xs={false} sm={4} md={7} className="leftGrid">
-      <Logo />
+      <Grid item xs={false} sm={4} md={7}>
       <Particles className="particles"
-        params={ particlesOptions }
-        />   
+      params={ particlesOptions }
+      /> 
+      <Logo />
       </Grid>
 
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square className="rightGrid">
