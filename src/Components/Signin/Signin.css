@@ -1,0 +1,19 @@
+.centered {
+    margin: 0 auto;
+}
+
+.leftGrid {
+    background: linear-gradient(#00d2ff, #3a7bd5);
+}
+
+.rightGrid {
+    background: linear-gradient(to top, #50C9C3, #96DEDA);
+}
+
+.particles {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
