@@ -1,143 +1,38 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
-// import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-
-import Logo from '../Logo/Logo'; 
-import Particles from 'react-particles-js';
 import './Signin.css';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    height: '100vh',
-  },
-  image: {
-    backgroundImage: 'url(https://source.unsplash.com/random)',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-  paper: {
-    margin: theme.spacing(8, 4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
 
-const particlesOptions = {
-    "particles": {
-        "number": {
-            "value": 70
-        },
-        "size": {
-            "value": 2
-        }
-    },
-    "interactivity": {
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "repulse"
-            }
-        }
-    }
-}
-
-export default function Signin() {
-  const classes = useStyles();
-
+const Signin = ({ onRouteChange }) => {
   return ( 
-    <Grid container component="main" className={classes.root}>
-      <CssBaseline />
-      {/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
-      <Grid item xs={false} sm={4} md={7}>
-      <Particles className="particles"
-      params={ particlesOptions }
-      /> 
-      <Logo />
-      </Grid>
+    <article className="bg-card br2 ba b--black-10 mv4 w-75 h-100 center shadow-2">
+      <main className="pa4 black-80 centered">
+        <form className="measure">
+          <fieldset id="sign_up" className="ba b--transparent ph0 mh0 w-100">
+            <legend className="f4 fw6 center">Sign In</legend>
+            <div className="mt3">
+              <label className="fw6 lh-copy f6" for="email-address">Email</label>
+              <input className="pa2 input-reset ba bg-transparent hover-bg-white w-100" type="email" name="email-address"  id="email-address" />
+            </div>
+            <div className="mv3">
+              <label className="fw6 lh-copy f6" for="password">Password</label>
+              <input className="b pa2 input-reset ba bg-transparent hover-bg-white w-100" type="password" name="password"  id="password" />
+            </div>
+            <label className="pa0 ma0 lh-copy f6 pointer"><input type="checkbox" /> Remember me</label>
+            <a href="#0" className="f6 link dim black fr">Forgot your password?</a>
+          </fieldset>
+          <div className="">
+            <input onClick={() => onRouteChange("dashboard")} className=" b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 db center w-100" type="submit" value="Sign in" />
+          </div>
+          <div className="lh-copy mt3">
+            <p onClick={() => onRouteChange("register")} className="f6 link dim black dt center">Dont have an account? Sign up</p>
+          </div>
+        </form>
+      </main>
+    </article>
 
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square className="rightGrid">
-        <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          <form className={classes.form} noValidate>
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            {/* <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            /> */}
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Sign In
-            </Button>
-            <Grid container>
-              {/* <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid> */}
-              {/* <Grid item> */}
-                <div className="centered">
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </div>
-              {/* </Grid> */}
-            </Grid>
-          </form>
-        </div>
-      </Grid>
-    </Grid>
+
+      
   );
 }
+
+export default Signin;

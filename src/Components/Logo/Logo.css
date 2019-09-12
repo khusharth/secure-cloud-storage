@@ -1,20 +1,10 @@
-.center {
+.Tilt {
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+}
+
+.centered {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-}
-
-.logo-box {
-    background: linear-gradient(#00d2ff, #3a7bd5);
-    display: inline-block;
-    padding: 10px;
-    box-shadow: 0px 10px 10px;
-    z-index: +1;
-    border-radius: 5px;
-}
-
-.Tilt {
-    box-shadow: 0px 5px 5px;
-    background: linear-gradient(#00d2ff, #3a7bd5);
-}
+  }

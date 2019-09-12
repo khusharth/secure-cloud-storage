@@ -23,10 +23,10 @@ import cloud from './cloud.png';
 
 const Logo = () => {
     return (
-        <div className="center">
+        <div className="centered">
             <Tilt className="Tilt br2 shadow-2" options={{ max : 80 }} style={{ height: 150, width: 150 }} >
                 <div className="Tilt-inner pa3">
-                    <img style={{padding: '20px'}} src={cloud} alt="Logo" />
+                    <img style={{padding: '6px'}} src={cloud} alt="Logo" />
                 </div>
             </Tilt>
         </div>
