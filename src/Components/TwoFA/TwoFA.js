@@ -16,7 +16,7 @@ const TwoFA = ({ onRouteChange }) => {
             </div>
           </fieldset>
           <div className="">
-            <input onClick={() => onRouteChange("signin")} className=" b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 db center w-100 mt3" type="submit" value="Sign in" />
+            <input onClick={() => onRouteChange("dashboard")} className=" b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 db center w-100 mt3" type="submit" value="Sign in" />
           </div>
           <div className="lh-copy mt3">
             <p onClick={() => onRouteChange("signin")} className="f6 link dim black dt center pointer">Back to Sign in</p>
